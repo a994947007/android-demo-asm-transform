@@ -1,0 +1,5 @@
+rootProject.name = "android-demo-asm"
+include ':app'
+include ':plugin'
+include ':log'
+include ':asm-log'

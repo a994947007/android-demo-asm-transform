@@ -1,0 +1,15 @@
+plugins {
+    id 'java-library'
+}
+
+apply from: rootProject.file('gradle/mvn-publish.gradle')
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+dependencies {
+    implementation gradleApi()
+    implementation 'com.android.tools.build:gradle:3.6.3'
+}
