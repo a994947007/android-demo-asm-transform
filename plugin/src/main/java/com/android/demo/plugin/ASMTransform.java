@@ -76,6 +76,9 @@ public class ASMTransform extends Transform {
     }
 
     private void processClassFile(File classFile) {
+        if (!classFile.getName().endsWith(".class")) {
+            return;
+        }
         FileOutputStream fos = null;
         try {
             Class<?> classHandlerClass = Class.forName(classHandlerPath);

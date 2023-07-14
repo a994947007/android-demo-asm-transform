@@ -10,12 +10,9 @@ public class ASMPlugin implements Plugin<Project> {
     @Override
     public void apply(Project project) {
         final ASMPluginExt asmPluginExt = project.getExtensions().create("asmPlugin", ASMPluginExt.class);
-        project.afterEvaluate(new Action<Project>() {
-            @Override
-            public void execute(Project project) {
-                AppExtension appExtension = project.getExtensions().getByType(AppExtension.class);
-                appExtension.registerTransform(new ASMTransform(asmPluginExt.getClassHandlerPath()));
-            }
+        project.afterEvaluate(pro -> {
+            AppExtension appExtension = pro.getExtensions().getByType(AppExtension.class);
+            appExtension.registerTransform(new ASMTransform(asmPluginExt.getClassHandlerPath()));
         });
     }
 }
