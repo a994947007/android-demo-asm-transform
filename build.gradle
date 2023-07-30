@@ -71,7 +71,7 @@ ext {
 
     PUBLISH_GROUP_ID = 'com.android.demo'
     PUBLISH_ARTIFACT_ID = 'asmPlugin'
-    PUBLISH_VERSION = '1.2'
+    PUBLISH_VERSION = '2.0'
 }
 
 task clean(type: Delete) {
